@@ -1,3 +1,4 @@
+require("dotenv").config();
 const fs = require("fs/promises");
 
 // ========== 任務一：讀取會員清單 ==========
@@ -87,7 +88,7 @@ function getGymConfig() {
   // 提示：用 || 給預設值
   const gymName = process.env.GYM_NAME || "未命名健身房";
   const adminName = process.env.ADMIN_NAME || "尚未指派";
-  const defaultMembersPath = process.env.DEFAULT_MEMBERS_PATH || undefined;
+  const defaultMembersPath = process.env.DEFAULT_MEMBERS_PATH;
   return { gymName, adminName, defaultMembersPath };
 }
 
